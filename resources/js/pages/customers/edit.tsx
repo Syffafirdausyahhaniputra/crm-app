@@ -34,9 +34,9 @@ export default function EditCustomer({ customer }: PageProps<{ customer: Custome
 
     return (
         <AppLayout breadcrumbs={[{ title: 'Customers', href: '/customers' }, { title: 'Edit', href: '#' }]}>            
-            <Head title="Edit Pelanggan" />
+            <Head title="Edit Customer" />
             <div className="p-6 max-w-2xl mx-auto">
-                <h1 className="text-2xl font-bold mb-4">Edit Pelanggan</h1>
+                <h1 className="text-2xl font-bold mb-4">Edit Customer</h1>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <Input label="Nama" value={data.nama} onChange={e => setData('nama', e.target.value)} error={errors.nama} />
                     <Input label="No. WA" value={data.no_telf} onChange={e => setData('no_telf', e.target.value)} error={errors.no_telf} />

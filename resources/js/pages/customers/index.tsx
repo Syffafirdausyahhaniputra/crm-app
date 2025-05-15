@@ -24,23 +24,23 @@ export default function CustomerIndex({ customers }: PageProps<{ customers: Cust
   const { delete: destroy } = useForm()
 
   const handleDelete = (id: number) => {
-    if (confirm('Yakin ingin menghapus pelanggan ini?')) {
+    if (confirm('Are you sure you want to delete this customer?')) {
       destroy(route('customers.destroy', id))
     }
   }
 
   return (
     <AppLayout breadcrumbs={breadcrumbs}>
-      <Head title="Data Pelanggan" />
+      <Head title="Data Customers" />
 
       <div className="p-6 space-y-6">
         <div className="flex items-center justify-between">
-          <h1 className="text-2xl font-semibold">Data Pelanggan</h1>
+          <h1 className="text-2xl font-semibold">Data Customers</h1>
           <Link
             href="/customers/create"
             className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
           >
-            + Tambah Pelanggan
+            + Add Customer
           </Link>
         </div>
 
@@ -48,12 +48,12 @@ export default function CustomerIndex({ customers }: PageProps<{ customers: Cust
           <table className="min-w-full divide-y divide-gray-200 text-sm">
             <thead className="bg-gray-50 text-left">
               <tr>
-                <th className="px-4 py-2 font-medium text-gray-600">Nama</th>
+                <th className="px-4 py-2 font-medium text-gray-600">Name</th>
                 <th className="px-4 py-2 font-medium text-gray-600">No. WA</th>
                 <th className="px-4 py-2 font-medium text-gray-600">Email</th>
-                <th className="px-4 py-2 font-medium text-gray-600">Kota</th>
-                <th className="px-4 py-2 font-medium text-gray-600">Transaksi</th>
-                <th className="px-4 py-2 font-medium text-gray-600 text-center">Aksi</th>
+                <th className="px-4 py-2 font-medium text-gray-600">City</th>
+                <th className="px-4 py-2 font-medium text-gray-600">Transaction</th>
+                <th className="px-4 py-2 font-medium text-gray-600 text-center">Action</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">
@@ -76,7 +76,7 @@ export default function CustomerIndex({ customers }: PageProps<{ customers: Cust
                         onClick={() => handleDelete(customer.id)}
                         className="text-red-600 hover:underline"
                       >
-                        Hapus
+                        Delete
                       </button>
                     </td>
                   </tr>

@@ -21,9 +21,9 @@ export default function CreateCustomer() {
 
     return (
         <AppLayout breadcrumbs={[{ title: 'Customers', href: '/customers' }, { title: 'Tambah', href: '#' }]}>
-            <Head title="Tambah Pelanggan" />
+            <Head title="Add Customer" />
             <div className="p-6 max-w-3xl mx-auto">
-                <h1 className="text-xl font-semibold mb-6">Tambah Pelanggan</h1>
+                <h1 className="text-xl font-semibold mb-6">Add Customer</h1>
                 <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <Input label="Nama" value={data.nama} onChange={e => setData('nama', e.target.value)} error={errors.nama} />
                     <Input label="No. WA" value={data.no_telf} onChange={e => setData('no_telf', e.target.value)} error={errors.no_telf} />
