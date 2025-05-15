@@ -20,7 +20,7 @@ export default function CreateCustomer() {
     };
 
     return (
-        <AppLayout breadcrumbs={[{ title: 'Customers', href: '/customers' }, { title: 'Tambah', href: '#' }]}>
+        <AppLayout breadcrumbs={[{ title: 'Customers', href: '/customers' }, { title: 'Add Customer', href: '#' }]}>
             <Head title="Add Customer" />
             <div className="p-6 max-w-3xl mx-auto">
                 <h1 className="text-xl font-semibold mb-6">Add Customer</h1>
